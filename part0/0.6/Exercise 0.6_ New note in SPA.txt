@@ -1,0 +1,21 @@
+title Exercise 0.6: New note in SPA
+
+note over browser:
+user enters text in the input field
+and clicks the "save" button
+end note
+
+note over browser:
+browser executes the event handler
+that prevents default form submit
+and rerenders the note list
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over server:
+server receives the new note in
+the request body and saves it
+end note
+
+server-->browser: {"message":"note created"}
